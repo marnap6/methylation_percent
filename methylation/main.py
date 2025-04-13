@@ -2,7 +2,6 @@ import pandas as pd
 
 seqs = pd.read_csv("non_recombined_filtered_without_per.bed", sep="\t", header=None, names=["chrom", "start", "end", "count", "len", "strand"])
 recombined = pd.read_csv("recombined_filtered_without_per.bed", sep="\t", header=None, names=["chrom", "start", "end"])
-# Wczytaj metylację
 meth = pd.read_csv("hmm_refined_meth_segments.bed", sep="\t", header=None, names=["chrom", "meth_start", "meth_end", "meth_pct", "state", "color"])
 
 def calculate_methylation(row):
